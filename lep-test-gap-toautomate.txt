@@ -1,0 +1,62 @@
+Style: Ok_Cancel2, Tag: {52,GAP/DM/LEP/BV-07-C,GAP}
+Please prepare IUT into general discoverable mode and send an advertising report using connectable undirected advertising.
+
+--------------------------------------------------
+Style: Ok_Cancel2, Tag: {52,GAP/DM/LEP/BV-08-C,GAP}
+Please prepare IUT into general discoverable mode and send an advertising report using connectable undirected advertising.
+Test case : GAP/DM/LEP/BV-08-C started
+- the IUT answers to inquiry in General discoverable mode successfully.
+- Found an address(=0x5CF370601DA1). Type=0. This address will be used for searching next advertising packets.
+- Found 8 Advertising packets. Stop reading
+- IUT did not include FLAGS AD type in Advertising Report Event
+	 -Final Verdict: FAIL
+GAP/DM/LEP/BV-08-C finished
+
+
+Style: Ok_Cancel2, Tag: {52,GAP/DM/LEP/BV-10-C,GAP}
+Please prepare IUT into general discoverable mode and send an advertising report using connectable undirected advertising.
+
+--------------------------------------------------
+Style: Yes_No1, Tag: {146,GAP/DM/LEP/BV-10-C,GAP}
+Please start general inquiry. Click 'Yes' If IUT does discovers PTS and ready for PTS to initiate a create connection otherwise click 'No'.
+
+
+-----------------------------------------------------
+Test case : GAP/DM/LEP/BV-10-C started
+- Found an address(=0x5CF370601DA1). Type=0. This address will be used for searching next advertising packets.
+- Found 5 Advertising packets. Stop reading
+- IUT did not include FLAGS AD type in Advertising Report Event
+	 -Final Verdict: FAIL
+GAP/DM/LEP/BV-10-C finished
+=================================================
+
+
+
+
+Test case : GAP/DM/LEP/BV-11-C started
+- the IUT answers to inquiry in General discoverable mode successfully.
+- Connection established successfully.
+- IUT successfully initiated connection.
+- Received HCI disconnection event. Handle = 0x0061
+- Connection terminated successfully.
+- IUT successfully initiated disconnection.
+- Connection terminated successfully.
+	 -Final Verdict: PASS
+GAP/DM/LEP/BV-11-C finished
+--------------------------------------------------
+Style: Ok_Cancel1, Tag: {33,GAP/DM/LEP/BV-11-C,GAP}
+Please make IUT general discoverable.
+
+--------------------------------------------------
+Style: Ok_Cancel2, Tag: {78,GAP/DM/LEP/BV-11-C,GAP}
+Please send an LE connect request to establish a connection.
+
+--------------------------------------------------
+Style: Ok_Cancel1, Tag: {105,GAP/DM/LEP/BV-11-C,GAP}
+Please make IUT connectable. Press OK to continue.
+
+--------------------------------------------------
+Style: Ok_Cancel2, Tag: {77,GAP/DM/LEP/BV-11-C,GAP}
+Please send a disconnect request to terminate connection.
+=====================================================================================
+
