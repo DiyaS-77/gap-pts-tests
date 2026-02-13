@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PTSExecutionReport>
+  <ExecutionInfo>
+    <Project>GAP</Project>
+    <ExecutionTime>2026-02-13 14:00:59</ExecutionTime>
+    <Total>4</Total>
+    <Passed>0</Passed>
+    <Failed>0</Failed>
+    <Inconclusive>1</Inconclusive>
+  </ExecutionInfo>
+  <TestCases>
+    <TestCase>
+      <TestCaseID>Running test case</TestCaseID>
+      <Date>2026-02-13 14:00:59</Date>
+      <Verdict>GAP/ADV/BV-03-C</Verdict>
+      <FailureReason />
+    </TestCase>
+    <TestCase>
+      <TestCaseID>Running test case</TestCaseID>
+      <Date>2026-02-13 14:00:59</Date>
+      <Verdict>GAP / GAP/ADV/BV-03-C</Verdict>
+      <FailureReason />
+    </TestCase>
+    <TestCase>
+      <TestCaseID>Testcase</TestCaseID>
+      <Date>2026-02-13 14:00:59</Date>
+      <Verdict>GAP/ADV/BV-03-C</Verdict>
+      <FailureReason />
+    </TestCase>
+    <TestCase>
+      <TestCaseID>GAP/ADV/BV-03-C</TestCaseID>
+      <Date>2026-02-13 14:00:59</Date>
+      <Verdict>INDCSV</Verdict>
+      <FailureReason>Failed to scan advertising packets.</FailureReason>
+    </TestCase>
+  </TestCases>
+</PTSExecutionReport>
