@@ -1,37 +1,68 @@
-<?xml version='1.0' encoding='utf-8'?>
-<PTSExecutionReport>
-  <ExecutionInfo>
-    <Project>GAP</Project>
-    <ExecutionTime>2026-02-13 14:00:59</ExecutionTime>
-    <Total>4</Total>
-    <Passed>0</Passed>
-    <Failed>0</Failed>
-    <Inconclusive>1</Inconclusive>
-  </ExecutionInfo>
-  <TestCases>
-    <TestCase>
-      <TestCaseID>Running test case</TestCaseID>
-      <Date>2026-02-13 14:00:59</Date>
-      <Verdict>GAP/ADV/BV-03-C</Verdict>
-      <FailureReason />
-    </TestCase>
-    <TestCase>
-      <TestCaseID>Running test case</TestCaseID>
-      <Date>2026-02-13 14:00:59</Date>
-      <Verdict>GAP / GAP/ADV/BV-03-C</Verdict>
-      <FailureReason />
-    </TestCase>
-    <TestCase>
-      <TestCaseID>Testcase</TestCaseID>
-      <Date>2026-02-13 14:00:59</Date>
-      <Verdict>GAP/ADV/BV-03-C</Verdict>
-      <FailureReason />
-    </TestCase>
-    <TestCase>
-      <TestCaseID>GAP/ADV/BV-03-C</TestCaseID>
-      <Date>2026-02-13 14:00:59</Date>
-      <Verdict>INDCSV</Verdict>
-      <FailureReason>Failed to scan advertising packets.</FailureReason>
-    </TestCase>
-  </TestCases>
-</PTSExecutionReport>
+def run_pts_trigger(args):
+
+    logger.info("Triggering PTS project via gRPC")
+
+    config_data = load_testbed(args.config)
+    controller_ip = config_data.get("controller_ip")
+
+    channel = grpc.insecure_channel(f"{controller_ip}:50051")
+    stub = pts_trigger_pb2_grpc.PTSTriggerStub(channel)
+
+    request = pts_trigger_pb2.ProjectRequest(
+        config=args.config,
+        testbed=args.testbed,
+        workspace=args.workspace,
+        project=args.project,
+    )
+
+    results = []
+    in_summary = False
+
+    for output in stub.RunProject(request):
+
+        line = output.line.strip()
+        logger.info(line)
+
+        # Detect summary start
+        if "PTS EXECUTION SUMMARY" in line:
+            in_summary = True
+            continue
+
+        # Detect summary end
+        if "==============================" in line and in_summary:
+            continue
+
+        if not in_summary:
+            continue
+
+        # Skip unwanted summary lines
+        if (
+            not line or
+            "Total testcases" in line or
+            "Passed" in line or
+            "Failed" in line or
+            "---" in line
+        ):
+            continue
+
+        # Only valid testcase summary lines contain " : "
+        if " : " in line:
+
+            parts = line.split(" : ")
+
+            testcase = parts[0].strip()
+            verdict = parts[1].strip()
+
+            reason = ""
+            if len(parts) >= 3:
+                reason = parts[2].strip()
+
+            results.append({
+                "testcase": testcase,
+                "verdict": verdict,
+                "reason": reason
+            })
+
+    logger.info("PTS project execution completed")
+
+    generate_pts_xml_report(results, args.project)
