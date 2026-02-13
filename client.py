@@ -183,43 +183,31 @@ def run_pts_trigger(args):
 
     channel = grpc.insecure_channel(f"{controller_ip}:50051")
     stub = pts_trigger_pb2_grpc.PTSTriggerStub(channel)
-
     request = pts_trigger_pb2.ProjectRequest(
         config=args.config,
         testbed=args.testbed,
         workspace=args.workspace,
         project=args.project,
     )
-
     for output in stub.RunProject(request):
         logger.info(output.line)
-
     download_report(stub, args)
-
     logger.info("PTS execution completed")
 
-
 def download_report(stub, args):
-
     logger.info("Downloading PTS report from server...")
-
     request = pts_trigger_pb2.ProjectRequest(
         config=args.config,
         testbed=args.testbed,
         workspace=args.workspace,
         project=args.project,
     )
-
     report = stub.GetReport(request)
-
     save_dir = os.path.join(os.getcwd(), "reports")
     os.makedirs(save_dir, exist_ok=True)
-
     save_path = os.path.join(save_dir, report.filename)
-
     with open(save_path, "wb") as f:
         f.write(report.content)
-
     logger.info("Report saved at: %s", save_path)
 
 def parse_args():
