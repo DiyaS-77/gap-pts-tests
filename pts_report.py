@@ -1,0 +1,218 @@
+import os
+from datetime import datetime
+import xml.etree.ElementTree as ET
+
+
+def generate_pts_xml_report(results, project_name, output_dir="reports"):
+    """
+    Generates PTS-style XML report with XSL styling support.
+
+    Args:
+        results (list): List of dict:
+            [
+                {
+                    "testcase": "GAP/ADV/BV-03-C",
+                    "verdict": "PASS",
+                    "reason": ""
+                }
+            ]
+        project_name (str)
+        output_dir (str)
+    """
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    execution_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+    filename = f"{project_name}_Report_{timestamp}.xml"
+    filepath = os.path.join(output_dir, filename)
+
+    passed = sum(1 for r in results if r["verdict"] == "PASS")
+    failed = sum(1 for r in results if r["verdict"] == "FAIL")
+    inconclusive = sum(1 for r in results if r["verdict"] == "INDCSV")
+
+    root = ET.Element("PTSExecutionReport")
+
+    execution_info = ET.SubElement(root, "ExecutionInfo")
+
+    ET.SubElement(execution_info, "Project").text = project_name
+    ET.SubElement(execution_info, "ExecutionTime").text = execution_time
+    ET.SubElement(execution_info, "Total").text = str(len(results))
+    ET.SubElement(execution_info, "Passed").text = str(passed)
+    ET.SubElement(execution_info, "Failed").text = str(failed)
+    ET.SubElement(execution_info, "Inconclusive").text = str(inconclusive)
+
+    testcases = ET.SubElement(root, "TestCases")
+
+    for r in results:
+
+        tc = ET.SubElement(testcases, "TestCase")
+
+        ET.SubElement(tc, "TestCaseID").text = r["testcase"]
+        ET.SubElement(tc, "Date").text = execution_time
+        ET.SubElement(tc, "Verdict").text = r["verdict"]
+        ET.SubElement(tc, "FailureReason").text = r["reason"]
+
+    tree = ET.ElementTree(root)
+
+    with open(filepath, "wb") as f:
+
+        f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write(b'<?xml-stylesheet type="text/xsl" href="pts_report_style.xsl"?>\n')
+
+        tree.write(f, encoding="utf-8")
+
+    generate_xsl_file(output_dir)
+
+    print(f"\nPTS XML Report Generated:")
+    print(filepath)
+
+    return filepath
+
+
+def generate_xsl_file(output_dir):
+
+    xsl_path = os.path.join(output_dir, "pts_report_style.xsl")
+
+    if os.path.exists(xsl_path):
+        return
+
+    xsl = """<?xml version="1.0" encoding="UTF-8"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+
+<html>
+
+<head>
+<title>PTS Execution Report</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    background-color: #f5f5f5;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px;
+}
+
+th {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+.pass {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
+.indcsv {
+    color: orange;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>PTS Execution Report</h2>
+
+<h3>Execution Info</h3>
+
+<table>
+
+<tr>
+<th>Project</th>
+<th>Total</th>
+<th>Passed</th>
+<th>Failed</th>
+<th>Inconclusive</th>
+</tr>
+
+<tr>
+<td><xsl:value-of select="PTSExecutionReport/ExecutionInfo/Project"/></td>
+<td><xsl:value-of select="PTSExecutionReport/ExecutionInfo/Total"/></td>
+<td><xsl:value-of select="PTSExecutionReport/ExecutionInfo/Passed"/></td>
+<td><xsl:value-of select="PTSExecutionReport/ExecutionInfo/Failed"/></td>
+<td><xsl:value-of select="PTSExecutionReport/ExecutionInfo/Inconclusive"/></td>
+</tr>
+
+</table>
+
+<h3>Test Case Results</h3>
+
+<table>
+
+<tr>
+<th>Test Case</th>
+<th>Verdict</th>
+<th>Failure Reason</th>
+</tr>
+
+<xsl:for-each select="PTSExecutionReport/TestCases/TestCase">
+
+<tr>
+
+<td>
+<xsl:value-of select="TestCaseID"/>
+</td>
+
+<td>
+
+<xsl:attribute name="class">
+
+<xsl:choose>
+
+<xsl:when test="Verdict='PASS'">pass</xsl:when>
+<xsl:when test="Verdict='FAIL'">fail</xsl:when>
+<xsl:otherwise>indcsv</xsl:otherwise>
+
+</xsl:choose>
+
+</xsl:attribute>
+
+<xsl:value-of select="Verdict"/>
+
+</td>
+
+<td>
+<xsl:value-of select="FailureReason"/>
+</td>
+
+</tr>
+
+</xsl:for-each>
+
+</table>
+
+</body>
+
+</html>
+
+</xsl:template>
+
+</xsl:stylesheet>
+"""
+
+    with open(xsl_path, "w") as f:
+        f.write(xsl)
