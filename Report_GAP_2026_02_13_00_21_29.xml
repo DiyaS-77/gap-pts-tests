@@ -1,0 +1,2876 @@
+<?xml-stylesheet type='text/css' href='file:///C:\Program Files (x86)\Bluetooth SIG\Bluetooth PTS\bin\ReportStylesheet.css'?>
+<?xml-stylesheet type='text/css' href='http://www.bluetooth.org/pts/ref/ReportStylesheetWeb.css'?>
+<REPORT>
+  <VERSION>20121015</VERSION>
+  <TITLE>Test Report</TITLE>
+  <SUBTITLE>GAP</SUBTITLE>
+  <SECTION_HEADER>General Information</SECTION_HEADER>
+  <GENERAL>
+    <TEXT>1. Facility</TEXT>
+    <FACILITY>
+      <NAME>Capgemini Deutschland GmbH</NAME>
+      <TEXT>ggg</TEXT>
+      <TEXT>email: diya.s@capgemini.com</TEXT>
+      <DATE>Date</DATE>
+      <TEXT>Friday, February 13, 2026, 00:21:29</TEXT>
+      <SIGNATURE>Signature ___________________________________________</SIGNATURE>
+    </FACILITY>
+    <TEXT>2. Member</TEXT>
+    <MEMBER>
+      <TEXT>ggg</TEXT>
+      <TEXT>email: diya.s@capgemini.com</TEXT>
+      <TEXT>Activation Code: MsZRptuPElk9BpNVaEXmafGw5dAjT5yGI81UwGZStLvnAAJttjx9CMB4VDjERJQJhO2UzeFgJpcevjQDBrYoA4Nf9yUHNs87utXZfjnNalJrs7AST96Z+MT1xJti+GHTkVIGsfnEsehIkON5dzXe22D/K6gbGvSBk9QYKH3GiMrPLaHLZmY3MUfsFeh1RCkzltxVCoZyW6420voxq789/NwpGt6qc9sBWetmyXht47a1e+YvUHskHVAbv69MSzTg</TEXT>
+    </MEMBER>
+    <TEXT>3. Product</TEXT>
+    <PRODUCT>
+      <TEXT>Hardware Version: </TEXT>
+      <TEXT>Software Version: </TEXT>
+    </PRODUCT>
+  </GENERAL>
+  <SECTION_HEADER>Profile Testing</SECTION_HEADER>
+  <TEST_SETUP>
+    <NAME>Description of Test Set-up</NAME>
+    <PICTURE />
+    <TEXT>The Test System PTS for Bluetooth is running on a PC System.</TEXT>
+    <TEXT>The test system communicates with the Bluetooth Hardware via an HCI connection.</TEXT>
+    <TEXT>The tests are performed as remote tests and all communication between the Test System and the IUT is done via the radio interface.</TEXT>
+  </TEST_SETUP>
+  <SECTION_HEADER>Summary List of All Performed Test Cases</SECTION_HEADER>
+  <TABLE>
+    <HEADER>
+      <TEXT>Test Case ID</TEXT>
+      <TEXT>Description</TEXT>
+      <TEXT>Comment</TEXT>
+    </HEADER>
+    <ROW>
+      <TEXT>GAP/ADV/BV-03-C</TEXT>
+      <TEXT>AD type - Flags</TEXT>
+      <TEXT />
+    </ROW>
+    <ROW>
+      <TEXT>GAP/BROB/OBSV/BV-01-C</TEXT>
+      <TEXT>Observation procedure, Passive Scanning</TEXT>
+      <TEXT />
+    </ROW>
+    <ROW>
+      <TEXT>GAP/BOND/BON/BV-01-C</TEXT>
+      <TEXT>Initiate bonding - Peripheral role</TEXT>
+      <TEXT />
+    </ROW>
+  </TABLE>
+  <SECTION_HEADER>ICS/IXIT Tables</SECTION_HEADER>
+  <TABLE>
+    <HEADER>
+      <TEXT>ICS Variable</TEXT>
+      <TEXT>Description</TEXT>
+      <TEXT>Support</TEXT>
+    </HEADER>
+    <ROW>
+      <TEXT>TSPC_GAP_0b_1</TEXT>
+      <TEXT>GAP BR/EDR Host (C.1, C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_0b_2</TEXT>
+      <TEXT>GAP LE Host (C.2, C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_1</TEXT>
+      <TEXT>Non-discoverable mode (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_2</TEXT>
+      <TEXT>Limited discoverable mode (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_3</TEXT>
+      <TEXT>General discoverable mode (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_4</TEXT>
+      <TEXT>Non-connectable mode (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_5</TEXT>
+      <TEXT>Connectable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_6</TEXT>
+      <TEXT>Non-bondable mode (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_7</TEXT>
+      <TEXT>Bondable mode (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_8</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_1_9</TEXT>
+      <TEXT>Synchronizable mode (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_1</TEXT>
+      <TEXT>Authentication procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_2</TEXT>
+      <TEXT>Support of LMP-Authentication (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_3</TEXT>
+      <TEXT>Initiate LMP-Authentication (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_4</TEXT>
+      <TEXT>Security mode 1 (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_5</TEXT>
+      <TEXT>Security mode 2 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_6</TEXT>
+      <TEXT>Security mode 3 (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_7</TEXT>
+      <TEXT>Security mode 4 (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_7a</TEXT>
+      <TEXT>Security mode 4, level 4 (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_7b</TEXT>
+      <TEXT>Security mode 4, level 3 (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_7c</TEXT>
+      <TEXT>Security mode 4, level 2 (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_7d</TEXT>
+      <TEXT>Security mode 4, level 1 (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_8</TEXT>
+      <TEXT>Authenticated link key (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_9</TEXT>
+      <TEXT>Unauthenticated link key (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_10</TEXT>
+      <TEXT>Security Optional (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_11</TEXT>
+      <TEXT>Secure Connections Only Mode (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_12</TEXT>
+      <TEXT>56-bit minimum encryption key size (C.10)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_13</TEXT>
+      <TEXT>128-bit encryption key size capable (C.11)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_13a</TEXT>
+      <TEXT>128-bit encryption key size capable, Security mode 4, level 4 (C.12)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_13b</TEXT>
+      <TEXT>128-bit encryption key size capable, Security mode 4, level 3 (C.13)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_13c</TEXT>
+      <TEXT>128-bit encryption key size capable, Security mode 4, level 2 (C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_13d</TEXT>
+      <TEXT>128-bit encryption key size capable, Security mode 4, level 1 (C.15)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_2_14</TEXT>
+      <TEXT>Out-of-Band (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_1</TEXT>
+      <TEXT>Initiation of general inquiry (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_2</TEXT>
+      <TEXT>Initiation of limited inquiry (C.1)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_3</TEXT>
+      <TEXT>Initiation of name discovery (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_4</TEXT>
+      <TEXT>Initiation of device discovery (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_5</TEXT>
+      <TEXT>Initiation of general bonding (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_3_6</TEXT>
+      <TEXT>Initiation of dedicated bonding (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_1</TEXT>
+      <TEXT>Link Establishment as initiator (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_2</TEXT>
+      <TEXT>Link Establishment as acceptor (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_3</TEXT>
+      <TEXT>Channel Establishment as initiator (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_4</TEXT>
+      <TEXT>Channel Establishment as acceptor (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_5</TEXT>
+      <TEXT>Connection Establishment as initiator (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_6</TEXT>
+      <TEXT>Connection Establishment as acceptor (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4_7</TEXT>
+      <TEXT>Synchronization Establishment as receiver (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4c_1</TEXT>
+      <TEXT>Synchronization Train (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4a_1</TEXT>
+      <TEXT>Detect insufficient authentication (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_1</TEXT>
+      <TEXT>Device Name (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_2</TEXT>
+      <TEXT>Appearance (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_3</TEXT>
+      <TEXT>Peripheral Preferred Connection Parameters (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_4</TEXT>
+      <TEXT>Central Address Resolution (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_5</TEXT>
+      <TEXT>Resolvable Private Address Only (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_6</TEXT>
+      <TEXT>Encrypted Data Key Material (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_7</TEXT>
+      <TEXT>Encrypted Data Key Material Indications (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_8</TEXT>
+      <TEXT>Writable Device Name (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4b_9</TEXT>
+      <TEXT>Writable Appearance (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4d_1</TEXT>
+      <TEXT>Secure Connections (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4e_1</TEXT>
+      <TEXT>Connectionless Peripheral Broadcast Transmitter (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4e_2</TEXT>
+      <TEXT>Connectionless Peripheral Broadcast Receiver (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_4e_3</TEXT>
+      <TEXT>Extended Inquiry Response (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_5_1</TEXT>
+      <TEXT>Broadcaster (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_5_2</TEXT>
+      <TEXT>Observer (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_5_3</TEXT>
+      <TEXT>Peripheral (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_5_4</TEXT>
+      <TEXT>Central (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_6_1</TEXT>
+      <TEXT>Transmitter (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_6_2</TEXT>
+      <TEXT>Receiver (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_7_1</TEXT>
+      <TEXT>Standby State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_7_2</TEXT>
+      <TEXT>Advertising State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_7_3</TEXT>
+      <TEXT>Isochronous Broadcasting State (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8_1</TEXT>
+      <TEXT>Non-connectable and non-scannable undirected events (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8_2</TEXT>
+      <TEXT>Scannable undirected events (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8_3</TEXT>
+      <TEXT>Non-connectable and non-scannable directed events (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8_4</TEXT>
+      <TEXT>Scannable directed events (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8_5</TEXT>
+      <TEXT>LE Extended Advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_1</TEXT>
+      <TEXT>Service UUID (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_2</TEXT>
+      <TEXT>Local Name (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_3</TEXT>
+      <TEXT>Flags (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_4</TEXT>
+      <TEXT>Manufacturer Specific Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_5</TEXT>
+      <TEXT>TX Power Level (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_6</TEXT>
+      <TEXT>Security Manager OOB (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_7</TEXT>
+      <TEXT>Security Manager TK Value (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_8</TEXT>
+      <TEXT>Peripheral Connection Interval Range (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_9</TEXT>
+      <TEXT>Service Solicitation (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_10</TEXT>
+      <TEXT>Service Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_11</TEXT>
+      <TEXT>Appearance (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_12</TEXT>
+      <TEXT>Public Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_13</TEXT>
+      <TEXT>Random Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_14</TEXT>
+      <TEXT>Advertising Interval (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_14a</TEXT>
+      <TEXT>Advertising Interval - Long (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_15</TEXT>
+      <TEXT>LE Bluetooth Device Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_16</TEXT>
+      <TEXT>LE Role (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_17</TEXT>
+      <TEXT>Uniform Resource Identifier (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_18</TEXT>
+      <TEXT>LE Supported features (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_19</TEXT>
+      <TEXT>Encrypted Data (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_8a_20</TEXT>
+      <TEXT>Periodic Advertising Response Timing (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_9_1</TEXT>
+      <TEXT>Non-connectable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_10_1</TEXT>
+      <TEXT>Broadcast mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_10_2</TEXT>
+      <TEXT>Broadcast Isochronous Synchronizability mode (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_10_3</TEXT>
+      <TEXT>Broadcast Isochronous Broadcasting mode (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_10_4</TEXT>
+      <TEXT>Broadcast Isochronous Terminate procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_10_5</TEXT>
+      <TEXT>Broadcast Isochronous Channel Map Update procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11_1</TEXT>
+      <TEXT>Privacy feature (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11_2</TEXT>
+      <TEXT>Resolvable private address generation procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11_3</TEXT>
+      <TEXT>Non-resolvable private address generation procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11_4</TEXT>
+      <TEXT>Resolvable private address resolution procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11_5</TEXT>
+      <TEXT>Controller-based privacy (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11a_1</TEXT>
+      <TEXT>Periodic Advertising Synchronizability mode (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11a_2</TEXT>
+      <TEXT>Periodic Advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11a_3</TEXT>
+      <TEXT>Periodic Advertising with Responses (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11a_4</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11b_1</TEXT>
+      <TEXT>LE security mode 3 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11b_2</TEXT>
+      <TEXT>LE security mode 3 level 1 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11b_3</TEXT>
+      <TEXT>LE security mode 3 level 2 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11b_4</TEXT>
+      <TEXT>LE security mode 3 level 3 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_11c_1</TEXT>
+      <TEXT>Out of Band (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_12_1</TEXT>
+      <TEXT>Receiver (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_12_2</TEXT>
+      <TEXT>Transmitter (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_13_1</TEXT>
+      <TEXT>Standby State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_13_2</TEXT>
+      <TEXT>Scanning State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14_1</TEXT>
+      <TEXT>Passive Scanning (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14_2</TEXT>
+      <TEXT>Active Scanning (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_1</TEXT>
+      <TEXT>Service UUID (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_2</TEXT>
+      <TEXT>Local Name (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_3</TEXT>
+      <TEXT>Flags (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_4</TEXT>
+      <TEXT>Manufacturer Specific Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_5</TEXT>
+      <TEXT>TX Power Level (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_6</TEXT>
+      <TEXT>Security Manager OOB (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_7</TEXT>
+      <TEXT>Security Manager TK Value (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_8</TEXT>
+      <TEXT>Peripheral Connection Interval Range (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_9</TEXT>
+      <TEXT>Service Solicitation (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_10</TEXT>
+      <TEXT>Service Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_11</TEXT>
+      <TEXT>Appearance (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_12</TEXT>
+      <TEXT>Public Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_13</TEXT>
+      <TEXT>Random Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_14</TEXT>
+      <TEXT>Advertising Interval (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_14a</TEXT>
+      <TEXT>Advertising Interval - Long (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_15</TEXT>
+      <TEXT>LE Bluetooth Device Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_16</TEXT>
+      <TEXT>LE Role (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_17</TEXT>
+      <TEXT>Uniform Resource Identifier (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_18</TEXT>
+      <TEXT>LE Supported features (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_19</TEXT>
+      <TEXT>Encrypted Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_14a_20</TEXT>
+      <TEXT>Periodic Advertising Response Timing (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_15_1</TEXT>
+      <TEXT>Non-connectable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_16_1</TEXT>
+      <TEXT>Observation procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_16_2</TEXT>
+      <TEXT>Broadcast Isochronous Synchronization Establishment procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_16_3</TEXT>
+      <TEXT>Broadcast Isochronous Termination procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_16_4</TEXT>
+      <TEXT>Broadcast Isochronous Channel Map Update procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17_1</TEXT>
+      <TEXT>Privacy feature (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17_2</TEXT>
+      <TEXT>Non-resolvable private address generation procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17_3</TEXT>
+      <TEXT>Resolvable private address resolution procedure (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17_4</TEXT>
+      <TEXT>Resolvable private address generation procedure (C.2)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17_5</TEXT>
+      <TEXT>Controller-based privacy (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_1</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure without listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_2</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure with listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_3</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_4</TEXT>
+      <TEXT>Scanning for Periodic Advertising (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_5</TEXT>
+      <TEXT>Synchronizing to Periodic Advertising (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17a_6</TEXT>
+      <TEXT>Scanning for Periodic Advertising with Responses (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17b_1</TEXT>
+      <TEXT>LE security mode 3 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17b_2</TEXT>
+      <TEXT>LE security mode 3 level 1 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17b_3</TEXT>
+      <TEXT>LE security mode 3 level 2 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_17b_4</TEXT>
+      <TEXT>LE security mode 3 level 3 (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_18_1</TEXT>
+      <TEXT>Transmitter (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_18_2</TEXT>
+      <TEXT>Receiver (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_19_1</TEXT>
+      <TEXT>Standby State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_19_2</TEXT>
+      <TEXT>Advertising State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_19_3</TEXT>
+      <TEXT>Connection State (Peripheral Role) (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_1</TEXT>
+      <TEXT>Connectable and scannable undirected events (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_2</TEXT>
+      <TEXT>Connectable directed events (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_2a</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_3</TEXT>
+      <TEXT>Non-connectable and non-scannable undirected events (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_4</TEXT>
+      <TEXT>Scannable undirected events (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_5</TEXT>
+      <TEXT>Connectable undirected events (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_6</TEXT>
+      <TEXT>Non-connectable and non-scannable directed events (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_7</TEXT>
+      <TEXT>Scannable directed events (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20_8</TEXT>
+      <TEXT>LE Extended Advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_1</TEXT>
+      <TEXT>Service UUID (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_2</TEXT>
+      <TEXT>Local Name (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_3</TEXT>
+      <TEXT>Flags (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_4</TEXT>
+      <TEXT>Manufacturer Specific Data (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_5</TEXT>
+      <TEXT>TX Power Level (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_6</TEXT>
+      <TEXT>Security Manager OOB (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_7</TEXT>
+      <TEXT>Security Manager TK Value (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_8</TEXT>
+      <TEXT>Peripheral Connection Interval Range (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_9</TEXT>
+      <TEXT>Service Solicitation (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_10</TEXT>
+      <TEXT>Service Data (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_11</TEXT>
+      <TEXT>Appearance (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_12</TEXT>
+      <TEXT>Public Target Address (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_13</TEXT>
+      <TEXT>Random Target Address (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_14</TEXT>
+      <TEXT>Advertising Interval (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_14a</TEXT>
+      <TEXT>Advertising Interval - Long (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_15</TEXT>
+      <TEXT>LE Bluetooth Device Address (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_16</TEXT>
+      <TEXT>LE Role (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_17</TEXT>
+      <TEXT>Uniform Resource Identifier (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_18</TEXT>
+      <TEXT>LE Supported features (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_19</TEXT>
+      <TEXT>Encrypted Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_20</TEXT>
+      <TEXT>Periodic Advertising Response Timing (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_20a_21</TEXT>
+      <TEXT>Periodic Advertising with Responses (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_1</TEXT>
+      <TEXT>Connection Update procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_2</TEXT>
+      <TEXT>Channel Map Update procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_3</TEXT>
+      <TEXT>Encryption procedure (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_4</TEXT>
+      <TEXT>Central-initiated Feature Exchange procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_5</TEXT>
+      <TEXT>Version Exchange procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_6</TEXT>
+      <TEXT>Termination procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_7</TEXT>
+      <TEXT>LE Ping procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_8</TEXT>
+      <TEXT>Peripheral-initiated Feature Exchange procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_9</TEXT>
+      <TEXT>Connection Parameter Request procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_10</TEXT>
+      <TEXT>Data Length Update procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_11</TEXT>
+      <TEXT>PHY Update procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_21_12</TEXT>
+      <TEXT>Minimum Number Of Used Channels procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_22_1</TEXT>
+      <TEXT>Non-discoverable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_22_2</TEXT>
+      <TEXT>Limited discoverable mode (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_22_3</TEXT>
+      <TEXT>General discoverable mode (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_22_4</TEXT>
+      <TEXT>Name discovery procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_1</TEXT>
+      <TEXT>Non-connectable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_2</TEXT>
+      <TEXT>Directed connectable mode (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_3</TEXT>
+      <TEXT>Undirected connectable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_4</TEXT>
+      <TEXT>Connection parameter update procedure (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_5</TEXT>
+      <TEXT>Terminate connection procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_6</TEXT>
+      <TEXT>Connected Isochronous Stream Peripheral Establishment procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_7</TEXT>
+      <TEXT>Connected Isochronous Stream Terminate procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_7a</TEXT>
+      <TEXT>Connected Isochronous Stream - Peripheral (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_8</TEXT>
+      <TEXT>Connection Subrate procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23_9</TEXT>
+      <TEXT>Periodic Advertising Connection (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23a_1</TEXT>
+      <TEXT>CS Initiator Role (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23a_2</TEXT>
+      <TEXT>CS Reflector Role (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_23a_3</TEXT>
+      <TEXT>Channel Sounding procedure for GAP Peripheral (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_24_1</TEXT>
+      <TEXT>Non-bondable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_24_2</TEXT>
+      <TEXT>Bondable mode (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_24_3</TEXT>
+      <TEXT>Bonding procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_24_4</TEXT>
+      <TEXT>Multiple Bonds (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_1</TEXT>
+      <TEXT>LE security mode 1 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_2</TEXT>
+      <TEXT>LE security mode 2 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_3</TEXT>
+      <TEXT>Authentication procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_4</TEXT>
+      <TEXT>Authorization procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_5</TEXT>
+      <TEXT>Connection data signing procedure (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_6</TEXT>
+      <TEXT>Authenticate signed data procedure (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_7</TEXT>
+      <TEXT>Authenticated Pairing (LE security mode 1 level 3) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_8</TEXT>
+      <TEXT>Unauthenticated Pairing (LE security mode 1 level 2) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_9</TEXT>
+      <TEXT>LE security mode 1 level 4 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_10</TEXT>
+      <TEXT>Secure Connections Only mode (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_11</TEXT>
+      <TEXT>Unauthenticated Pairing (LE security mode 1 level 2) with LE Secure Connections Pairing only (C.15)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_12</TEXT>
+      <TEXT>Authenticated Pairing (LE security mode 1 level 3) with LE Secure Connections Pairing only (C.16)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_13</TEXT>
+      <TEXT>Minimum 128-bit entropy key (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_13a</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 4 (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_13b</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 3 (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_13c</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 2 (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_14</TEXT>
+      <TEXT>Client security checks for GATT indications and notifications (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_15</TEXT>
+      <TEXT>Channel Sounding Security Level 1 (C.10, C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_16</TEXT>
+      <TEXT>Channel Sounding Security Level 2 (C.11, C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_17</TEXT>
+      <TEXT>Channel Sounding Security Level 3 (C.12, C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25_18</TEXT>
+      <TEXT>Channel Sounding Security Level 4 (C.13, C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_1</TEXT>
+      <TEXT>CS Mode-2 (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_2</TEXT>
+      <TEXT>CS Mode-3 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_3</TEXT>
+      <TEXT>CS RTT Access Address, 10 ns (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_4</TEXT>
+      <TEXT>CS RTT Access Address, 150 ns (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_5</TEXT>
+      <TEXT>CS RTT Sounding Sequence, 10 ns (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_6</TEXT>
+      <TEXT>CS RTT Sounding Sequence, 150 ns (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_7</TEXT>
+      <TEXT>CS RTT Random Payload, 10 ns (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_8</TEXT>
+      <TEXT>CS RTT Random Payload, 150 ns (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_9</TEXT>
+      <TEXT>Phase-based Normalized Attack Detector Metric - Sounding Sequence (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_25a_10</TEXT>
+      <TEXT>Phase-based Normalized Attack Detector Metric - Random Bit Sequence (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_1</TEXT>
+      <TEXT>Privacy feature (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_2</TEXT>
+      <TEXT>Non-resolvable private address generation procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_3</TEXT>
+      <TEXT>Resolvable private address generation procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_4</TEXT>
+      <TEXT>Resolvable private address resolution procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_5</TEXT>
+      <TEXT>Controller-based privacy (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_26_6</TEXT>
+      <TEXT>LL Privacy (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_1</TEXT>
+      <TEXT>Device Name (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_2</TEXT>
+      <TEXT>Appearance (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_5</TEXT>
+      <TEXT>Peripheral Preferred Connection Parameters (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_6</TEXT>
+      <TEXT>Writable Device Name (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_7</TEXT>
+      <TEXT>Writable Appearance (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_8</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_9</TEXT>
+      <TEXT>Central Address Resolution (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_9a</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_10</TEXT>
+      <TEXT>Encrypted Data Key Material (C.9)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_10a</TEXT>
+      <TEXT>Encrypted Data Key Material Indications (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_11</TEXT>
+      <TEXT>LE GATT Security Levels (C.10)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27_12</TEXT>
+      <TEXT>Resolvable Private Address Only (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_1</TEXT>
+      <TEXT>Periodic Advertising Synchronization Transfer procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_2</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure over an LE connection without listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_3</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure over an LE connection with listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_4</TEXT>
+      <TEXT>Periodic Advertising Sync Transfer - Sender (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_5</TEXT>
+      <TEXT>Periodic Advertising Sync Transfer - Recipient (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27a_6</TEXT>
+      <TEXT>Synchronizing to Periodic Advertising (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_1</TEXT>
+      <TEXT>Peripheral Role (Responder) (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_2</TEXT>
+      <TEXT>Authenticated MITM protection (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_3</TEXT>
+      <TEXT>Unauthenticated no MITM protection (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_4</TEXT>
+      <TEXT>No security requirements (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_5</TEXT>
+      <TEXT>LE Secure Connections (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_6</TEXT>
+      <TEXT>Long Term Key (LTK) (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_7</TEXT>
+      <TEXT>Identity Resolving Key (IRK) (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_8</TEXT>
+      <TEXT>Connection Signature Resolving Key (CSRK) (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_9</TEXT>
+      <TEXT>Out of Band (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_10</TEXT>
+      <TEXT>Peripheral Initiated Security (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_11</TEXT>
+      <TEXT>Legacy pairing (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27b_12</TEXT>
+      <TEXT>LE Secure Connection pairing (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27c_1</TEXT>
+      <TEXT>Detect insufficient authentication (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27c_2</TEXT>
+      <TEXT>Detect insufficient authorization (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_27c_3</TEXT>
+      <TEXT>Detect insufficient encryption (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_28_1</TEXT>
+      <TEXT>Transmitter (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_28_2</TEXT>
+      <TEXT>Receiver (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_29_1</TEXT>
+      <TEXT>Standby State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_29_2</TEXT>
+      <TEXT>Scanning State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_29_3</TEXT>
+      <TEXT>Initiating State (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_29_4</TEXT>
+      <TEXT>Connection State (Central Role) (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30_1</TEXT>
+      <TEXT>Passive Scanning (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30_2</TEXT>
+      <TEXT>Active Scanning (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_1</TEXT>
+      <TEXT>Service UUID (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_2</TEXT>
+      <TEXT>Local Name (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_3</TEXT>
+      <TEXT>Flags (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_4</TEXT>
+      <TEXT>Manufacturer Specific Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_5</TEXT>
+      <TEXT>TX Power Level (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_6</TEXT>
+      <TEXT>Security Manager OOB (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_7</TEXT>
+      <TEXT>Security Manager TK Value (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_8</TEXT>
+      <TEXT>Peripheral Connection Interval Range (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_9</TEXT>
+      <TEXT>Service Solicitation (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_10</TEXT>
+      <TEXT>Service Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_11</TEXT>
+      <TEXT>Appearance (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_12</TEXT>
+      <TEXT>Public Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_13</TEXT>
+      <TEXT>Random Target Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_14</TEXT>
+      <TEXT>Advertising Interval (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_14a</TEXT>
+      <TEXT>Advertising Interval - Long (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_15</TEXT>
+      <TEXT>LE Bluetooth Device Address (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_16</TEXT>
+      <TEXT>LE Role (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_17</TEXT>
+      <TEXT>Uniform Resource Identifier (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_18</TEXT>
+      <TEXT>LE Supported features (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_19</TEXT>
+      <TEXT>Encrypted Data (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_30a_20</TEXT>
+      <TEXT>Periodic Advertising Response Timing (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_1</TEXT>
+      <TEXT>Connection Update procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_2</TEXT>
+      <TEXT>Channel Map Update procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_3</TEXT>
+      <TEXT>Encryption procedure (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_4</TEXT>
+      <TEXT>Central-initiated Feature Exchange procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_5</TEXT>
+      <TEXT>Version Exchange procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_6</TEXT>
+      <TEXT>Termination procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_7</TEXT>
+      <TEXT>LE Ping procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_8</TEXT>
+      <TEXT>Peripheral-initiated Feature Exchange procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_9</TEXT>
+      <TEXT>Connection Parameter Request procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_10</TEXT>
+      <TEXT>Data Length Update procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_11</TEXT>
+      <TEXT>PHY Update procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_31_12</TEXT>
+      <TEXT>Minimum Number Of Used Channels procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_32_1</TEXT>
+      <TEXT>Limited Discovery procedure (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_32_2</TEXT>
+      <TEXT>General Discovery procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_32_3</TEXT>
+      <TEXT>Name Discovery procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_1</TEXT>
+      <TEXT>Auto connection establishment procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_2</TEXT>
+      <TEXT>General connection establishment procedure (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_3</TEXT>
+      <TEXT>Selective connection establishment procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_4</TEXT>
+      <TEXT>Direct connection establishment procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_5</TEXT>
+      <TEXT>Connection parameter update procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_6</TEXT>
+      <TEXT>Terminate connection procedure (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_7</TEXT>
+      <TEXT>Connected Isochronous Stream Central Establishment procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_8</TEXT>
+      <TEXT>Connected Isochronous Stream Terminate procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_8a</TEXT>
+      <TEXT>Connected Isochronous Stream - Central (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_9</TEXT>
+      <TEXT>Connection Subrate procedure (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_10</TEXT>
+      <TEXT>Periodic Advertising Connection procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33_11</TEXT>
+      <TEXT>Scanning for Periodic Advertising with Responses (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33a_1</TEXT>
+      <TEXT>CS Initiator Role (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33a_2</TEXT>
+      <TEXT>CS Reflector Role (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_33a_3</TEXT>
+      <TEXT>Channel Sounding procedure for GAP Central (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_34_1</TEXT>
+      <TEXT>Non-bondable mode (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_34_2</TEXT>
+      <TEXT>Bondable mode (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_34_3</TEXT>
+      <TEXT>Bonding procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_1</TEXT>
+      <TEXT>LE security mode 1 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_2</TEXT>
+      <TEXT>LE security mode 2 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_3</TEXT>
+      <TEXT>Authentication procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_4</TEXT>
+      <TEXT>Authorization procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_5</TEXT>
+      <TEXT>Connection data signing procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_6</TEXT>
+      <TEXT>Authenticate signed data procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_7</TEXT>
+      <TEXT>Authenticated Pairing (LE security mode 1 level 3) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_8</TEXT>
+      <TEXT>Unauthenticated Pairing (LE security mode 1 level 2) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_9</TEXT>
+      <TEXT>LE security mode 1 level 4 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_10</TEXT>
+      <TEXT>Secure Connections Only mode (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_11</TEXT>
+      <TEXT>Unauthenticated Pairing (LE security mode 1 level 2) with LE Secure Connections Pairing only (C.13)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_12</TEXT>
+      <TEXT>Authenticated Pairing (LE security mode 1 level 3) with LE Secure Connections Pairing only (C.14)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_13</TEXT>
+      <TEXT>Minimum 128-bit entropy key (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_13a</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 4 (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_13b</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 3 (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_13c</TEXT>
+      <TEXT>Minimum 128-bit entropy key, LE security mode 1 level 2 (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_14</TEXT>
+      <TEXT>Encrypted Advertising Data Procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_15</TEXT>
+      <TEXT>Client security checks for GATT indications and notifications (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_16</TEXT>
+      <TEXT>Channel Sounding Security Level 1 (C.8, C.12)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_17</TEXT>
+      <TEXT>Channel Sounding Security Level 2 (C.9, C.12)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_18</TEXT>
+      <TEXT>Channel Sounding Security Level 3 (C.10, C.12)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35_19</TEXT>
+      <TEXT>Channel Sounding Security Level 4 (C.11, C.12)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_1</TEXT>
+      <TEXT>CS Mode-2 (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_2</TEXT>
+      <TEXT>CS Mode-3 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_3</TEXT>
+      <TEXT>CS RTT Access Address, 10 ns (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_4</TEXT>
+      <TEXT>CS RTT Access Address, 150 ns (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_5</TEXT>
+      <TEXT>CS RTT Sounding Sequence, 10 ns (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_6</TEXT>
+      <TEXT>CS RTT Sounding Sequence, 150 ns (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_7</TEXT>
+      <TEXT>CS RTT Random Payload, 10 ns (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_8</TEXT>
+      <TEXT>CS RTT Random Payload, 150 ns (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_9</TEXT>
+      <TEXT>Phase-based Normalized Attack Detector Metric - Sounding Sequence (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_35a_10</TEXT>
+      <TEXT>Phase-based Normalized Attack Detector Metric - Random Bit Sequence (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_1</TEXT>
+      <TEXT>Privacy feature (O)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_2</TEXT>
+      <TEXT>Non-resolvable private address generation procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_3</TEXT>
+      <TEXT>Resolvable private address resolution procedure (C.1)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_4</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_5</TEXT>
+      <TEXT>Resolvable private address generation procedure (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_36_6</TEXT>
+      <TEXT>Controller-based privacy (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_1</TEXT>
+      <TEXT>Device Name (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_2</TEXT>
+      <TEXT>Appearance (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_3</TEXT>
+      <TEXT>Central Address Resolution (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_3a</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_4</TEXT>
+      <TEXT>LE GATT Security Levels (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_5</TEXT>
+      <TEXT>Resolvable Private Address Only (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_6</TEXT>
+      <TEXT>Writable Device Name (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37_7</TEXT>
+      <TEXT>Writable Appearance (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_1</TEXT>
+      <TEXT>Periodic Advertising Synchronization Transfer procedure (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_2</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure over an LE connection without listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_3</TEXT>
+      <TEXT>Periodic Advertising Synchronization Establishment procedure over an LE connection with listening for periodic advertising (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_4</TEXT>
+      <TEXT>Periodic Advertising Sync Transfer - Sender (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_5</TEXT>
+      <TEXT>Periodic Advertising Sync Transfer - Recipient (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37a_6</TEXT>
+      <TEXT>Synchronizing to Periodic Advertising (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_1</TEXT>
+      <TEXT>Central Role (Initiator) (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_2</TEXT>
+      <TEXT>Authenticated MITM protection (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_3</TEXT>
+      <TEXT>Unauthenticated no MITM protection (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_4</TEXT>
+      <TEXT>No security requirements (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_5</TEXT>
+      <TEXT>LE Secure Connections (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_6</TEXT>
+      <TEXT>Long Term Key (LTK) (C.5)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_7</TEXT>
+      <TEXT>Identity Resolving Key (IRK) (C.6)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_8</TEXT>
+      <TEXT>Connection Signature Resolving Key (CSRK) (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_9</TEXT>
+      <TEXT>Out of Band (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_10</TEXT>
+      <TEXT>Legacy pairing (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37b_11</TEXT>
+      <TEXT>LE Secure Connection pairing (C.4)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37c_1</TEXT>
+      <TEXT>Detect insufficient authentication (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37c_2</TEXT>
+      <TEXT>Detect insufficient authorization (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_37c_3</TEXT>
+      <TEXT>Detect insufficient encryption (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_41_1</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_41_2</TEXT>
+      <TEXT>Cross Transport Key Derivation Supported (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_41_2a</TEXT>
+      <TEXT>Derivation of BR/EDR Link Key from LE LTK (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_41_2b</TEXT>
+      <TEXT>Derivation of LE LTK from BR/EDR Link Key (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_43_1</TEXT>
+      <TEXT>No longer used (N/A)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_43_2</TEXT>
+      <TEXT>Cross Transport Key Derivation Supported (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_43_2a</TEXT>
+      <TEXT>Derivation of BR/EDR Link Key from LE LTK (C.2)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_43_2b</TEXT>
+      <TEXT>Derivation of LE LTK from BR/EDR Link Key (C.3)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_44_1</TEXT>
+      <TEXT>Simultaneous BR/EDR and LE Transports - BR/EDR Peripheral to the same device (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_44_2</TEXT>
+      <TEXT>Simultaneous BR/EDR and LE Transports - BR/EDR Central to the same device (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_45_1</TEXT>
+      <TEXT>Simultaneous BR/EDR and LE Transports - BR/EDR Peripheral to the same device (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GAP_45_2</TEXT>
+      <TEXT>Simultaneous BR/EDR and LE Transports - BR/EDR Central to the same device (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_CORE_1b_61</TEXT>
+      <TEXT>Controller Core v6.1 or later (C.7)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_CORE_1a_62</TEXT>
+      <TEXT>Controller Core v6.2 or later (C.8)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GATT_1_1</TEXT>
+      <TEXT>Generic Attribute Profile (GATT) Client (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GATT_1_2</TEXT>
+      <TEXT>Generic Attribute Profile (GATT) Server (M)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GATT_3_17</TEXT>
+      <TEXT>Single Notification (see Note) (C.7)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GATT_3_18</TEXT>
+      <TEXT>Indication (M)</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_GATT_3a_1</TEXT>
+      <TEXT>GAP LE Peripheral (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_L2CAP_2_11</TEXT>
+      <TEXT>Flow Control mode (C.11)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_L2CAP_2_37</TEXT>
+      <TEXT>Ability to transmit an encrypted packet over a Unicast connectionless L2CAP channel (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_L2CAP_2_48a</TEXT>
+      <TEXT>Enhanced Credit Based Flow Control Mode - BR/EDR (C.26)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_LL_2_5</TEXT>
+      <TEXT>Resolution of private addresses (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SM_1_1</TEXT>
+      <TEXT>Central Role (Initiator) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SM_1_2</TEXT>
+      <TEXT>Peripheral Role (Responder) (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SM_2_4</TEXT>
+      <TEXT>OOB supported (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_BB_10_7</TEXT>
+      <TEXT>Extended Inquiry Response (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_10</TEXT>
+      <TEXT>Core Specification Version 4.0, Adopted 30 June 2010 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_10a</TEXT>
+      <TEXT>Core Specification Version 4.0 + HS, Adopted 30 June 2010 (O)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_17</TEXT>
+      <TEXT>Core Spec Version 4.2, Adopted 02 December 2014 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_18</TEXT>
+      <TEXT>Core Spec Version 4.2 + HS, Adopted 02 December 2014 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_19</TEXT>
+      <TEXT>Core Specification Version 5.0. Adopted 06 December 2016 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_20</TEXT>
+      <TEXT>Core Specification Version 5.1. Adopted 15 January 2019 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_SUMICS_31_21</TEXT>
+      <TEXT>Core Specification Version 5.2. Adopted 31 December 2019 (C.1)</TEXT>
+      <TEXT>False</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPC_ALL</TEXT>
+      <TEXT>Enables all test cases when set.</TEXT>
+      <TEXT>True</TEXT>
+    </ROW>
+  </TABLE>
+  <TABLE>
+    <HEADER>
+      <TEXT>IXIT Variable</TEXT>
+      <TEXT>Description</TEXT>
+      <TEXT>Support</TEXT>
+    </HEADER>
+    <ROW>
+      <TEXT>TSPX_bd_addr_iut</TEXT>
+      <TEXT>The unique 48-bit Bluetooth device address (BD_ADDR) of the IUT. This was filled in during workspace creation.</TEXT>
+      <TEXT>5CF370601DA1</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_identity_address</TEXT>
+      <TEXT>The ID address of the IUT. This was filled in during workspace creation.</TEXT>
+      <TEXT>
+      </TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_initiator_address</TEXT>
+      <TEXT>The unique 48-bit Bluetooth device address (BD_ADDR) of the IUT. This was filled in during workspace creation.</TEXT>
+      <TEXT>
+      </TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_bd_addr_PTS</TEXT>
+      <TEXT>The unique 48-bit Bluetooth device address (BD_ADDR) of the PTS.</TEXT>
+      <TEXT>C000DEADBEEF</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_broadcaster_class_of_device</TEXT>
+      <TEXT>The indicated capabilities of PTS in broadcaster role (Default: 100104)</TEXT>
+      <TEXT>100104</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_observer_class_of_device</TEXT>
+      <TEXT>The indicated capabilities of PTS in observer role (Default: 100104)</TEXT>
+      <TEXT>100104</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_cod_iut</TEXT>
+      <TEXT>Class of Device (IUT). The indicated capabilities of IUT in peripheral role (Default: 100104)</TEXT>
+      <TEXT>100104</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_central_class_of_device</TEXT>
+      <TEXT>The indicated capabilities of PTS in central role (Default: 100104)</TEXT>
+      <TEXT>100104</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_security_enabled</TEXT>
+      <TEXT>Whether security is required for establishing connections. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_delete_link_key</TEXT>
+      <TEXT>Whether to delete the stored link key in PTS at the beginning of each test case. (Default: FALSE)</TEXT>
+      <TEXT>TRUE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_setup_att_over_br_edr</TEXT>
+      <TEXT>Device uses ATT over BR EDR radio. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_mtu_size</TEXT>
+      <TEXT>MTU size. (Default: 23)</TEXT>
+      <TEXT>23</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_delete_ltk</TEXT>
+      <TEXT>Whether to delete Long Term Key or not. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_pin_code</TEXT>
+      <TEXT>The PIN code that is used to authenticate connections between PTS and IUT. (Default: 0000)</TEXT>
+      <TEXT>0000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_time_guard</TEXT>
+      <TEXT>The time in milliseconds, to break PTS from waiting for a required event, if time guard is used by the test case. (Default: 300000)</TEXT>
+      <TEXT>300000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_use_implicit_send</TEXT>
+      <TEXT>Whether to receive a message via Implicit Send when an action or attention is needed by test operator. (Default: TRUE)</TEXT>
+      <TEXT>TRUE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_use_dynamic_pin</TEXT>
+      <TEXT>Turns dynamic pin code entry on or off. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_secure_simple_pairing_pass_key_confirmation</TEXT>
+      <TEXT>Whether manual confirmation on generated key is required during secure simple pairing (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_using_public_device_address</TEXT>
+      <TEXT>Turn this to true if IUT is using public device address. (Default: TRUE)</TEXT>
+      <TEXT>TRUE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_using_random_device_address</TEXT>
+      <TEXT>Turn this to true if IUT is using random device address. (Default: FALSE)</TEXT>
+      <TEXT>TRUE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_lim_adv_timeout</TEXT>
+      <TEXT>Maximum time to remain advertising when in the limited discoverable mode. (Default: 30720)</TEXT>
+      <TEXT>30720</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_gen_disc_adv_min</TEXT>
+      <TEXT>Maximum time to remain advertising when in the general discoverable mode. (Default: 30720)</TEXT>
+      <TEXT>30720</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_lim_disc_scan_min</TEXT>
+      <TEXT>Minimum time to perform scanning when performing the limited discovery procedure. (Default: 10240)</TEXT>
+      <TEXT>10240</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_gen_disc_scan_min</TEXT>
+      <TEXT>Minimum time to perform scanning when performing the general discovery procedure. (Default: 10240)</TEXT>
+      <TEXT>10240</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_database_file</TEXT>
+      <TEXT>Name of the database to be retrieved from database directory in certain test cases. (Default: Database-GAP.sig)</TEXT>
+      <TEXT>Database-GAP.sig</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_rx_mtu</TEXT>
+      <TEXT>IUT's Rx MTU size. (Default: 23)</TEXT>
+      <TEXT>23</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_private_address_interval</TEXT>
+      <TEXT>Minimum time interval between private address change. (Default: 5000)</TEXT>
+      <TEXT>5000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_privacy_enabled</TEXT>
+      <TEXT>Specify if IUT has privacy enabled. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_psm</TEXT>
+      <TEXT>PSM to be used by PTS when establishing basic rate L2CAP connection. (Default: 1001)</TEXT>
+      <TEXT>1001</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_psm_2</TEXT>
+      <TEXT>PSM to be used by PTS when establishing basic rate L2CAP connection without authentication. (Default: 2001)</TEXT>
+      <TEXT>2001</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_spsm</TEXT>
+      <TEXT>PSM to be used by PTS when establishing credit based L2CAP connection(for K-frame). (Default: 0027)</TEXT>
+      <TEXT>0027</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_psm_sm4l2</TEXT>
+      <TEXT>The PSM for the service on the IUT that requires security mode 4 level 2. (Default: 2003)</TEXT>
+      <TEXT>2003</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_psm_sm4l3</TEXT>
+      <TEXT>The PSM for the service on the IUT that requires security mode 4 level 3. (Default: 2005)</TEXT>
+      <TEXT>2005</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_psm_sm4l4</TEXT>
+      <TEXT>The PSM for the service on the IUT that requires security mode 4 level 4. (Default: 2007)</TEXT>
+      <TEXT>2007</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_valid_connection_interval_min</TEXT>
+      <TEXT>Valid connection interval min for IUT. (Default: 00C8)</TEXT>
+      <TEXT>00C8</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_valid_connection_interval_max</TEXT>
+      <TEXT>Valid connection interval max for IUT. (Default: 03C0)</TEXT>
+      <TEXT>03C0</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_valid_connection_latency</TEXT>
+      <TEXT>Valid connection latency for IUT. (Default: 0006)</TEXT>
+      <TEXT>0006</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_valid_timeout_multiplier</TEXT>
+      <TEXT>Valid timeout multiplier for IUT. (Default: 0962)</TEXT>
+      <TEXT>0962</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_Tgap_conn_param_timeout</TEXT>
+      <TEXT>Connection parameter timeout value for IUT. (Default: 30000)</TEXT>
+      <TEXT>30000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_invalid_connection_interval_min</TEXT>
+      <TEXT>Invalid connection interval min for IUT. (Default: 0008)</TEXT>
+      <TEXT>0008</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_invalid_connection_interval_max</TEXT>
+      <TEXT>Invalid connection interval max for IUT. (Default: 00AA)</TEXT>
+      <TEXT>00AA</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_invalid_connection_latency</TEXT>
+      <TEXT>Invalid connection latency for IUT. (Default: 0000)</TEXT>
+      <TEXT>0000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_invalid_conn_update_supervision_timeout</TEXT>
+      <TEXT>Invalid connection update supervision timeout for IUT. (Default: 0800)</TEXT>
+      <TEXT>0800</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_LE_scan_interval</TEXT>
+      <TEXT>LE scan interval to be used. (Default: 0010)</TEXT>
+      <TEXT>0010</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_LE_scan_window</TEXT>
+      <TEXT>LE scan window to be used. (Default: 0010)</TEXT>
+      <TEXT>0010</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_con_interval_min</TEXT>
+      <TEXT>Connection Interval Min to be used. (Default: 0032)</TEXT>
+      <TEXT>0032</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_con_interval_max</TEXT>
+      <TEXT>Connection Interval Max to be used. (Default: 0046)</TEXT>
+      <TEXT>0046</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_con_latency</TEXT>
+      <TEXT>Connection Latency to be used. (Default: 0001)</TEXT>
+      <TEXT>0001</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_supervision_timeout</TEXT>
+      <TEXT>Supervision Timeout to be used. (Default: 07D0)</TEXT>
+      <TEXT>07D0</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_minimum_ce_length</TEXT>
+      <TEXT>Minimum CE Length to be used. (Default: 0000)</TEXT>
+      <TEXT>0000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_maximum_ce_length</TEXT>
+      <TEXT>Maximum CE Length to be used. (Default: 0000)</TEXT>
+      <TEXT>0000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_conn_update_int_min</TEXT>
+      <TEXT>Connection Update Interval Minimum to be used. (Default: 0032)</TEXT>
+      <TEXT>0032</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_conn_update_int_max</TEXT>
+      <TEXT>Connection Update Interval Maximum to be used. (Default: 0046)</TEXT>
+      <TEXT>0046</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_conn_update_peripheral_latency</TEXT>
+      <TEXT>Connection Update Peripheral Latency to be used. (Default: 0001)</TEXT>
+      <TEXT>0001</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_conn_update_supervision_timeout</TEXT>
+      <TEXT>Connection Update Supervision Timeout to be used. (Default: 01F4)</TEXT>
+      <TEXT>01F4</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_pairing_before_service_request</TEXT>
+      <TEXT>Whether the IUT starts the pairing procedure before issuing any service request. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_mandates_mitm</TEXT>
+      <TEXT>IUT security policy of whether or not it mandates MITM. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_encryption_before_service_request</TEXT>
+      <TEXT>Whether the IUT starts the encryption procedure before issuing any service request. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_tester_appearance</TEXT>
+      <TEXT>Specify tester appearance value for centain type of IUT (Default: 0x0000)</TEXT>
+      <TEXT>0000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_advertising_data</TEXT>
+      <TEXT>IUT advertising data during broadcasting for random address (Default: 0x0201040503001801180D095054532d4741502d3036423803190000)</TEXT>
+      <TEXT>0201040503001801180D095054532D4741502D3036423803190000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_scan_response_data</TEXT>
+      <TEXT>The scan response data used in Broadcast mode is specified for the Lower Tester. (Default: 1324162F2F626c7565746f6f74682e636f6d0d0a)</TEXT>
+      <TEXT>1324162F2F626C7565746F6F74682E636F6D0D0A</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_device_IRK_for_resolvable_privacy_address_generation_procedure</TEXT>
+      <TEXT>The Device Identity (IRK and Identity Address) used in the Resolvable Private Address Generation Procedure and Resolvable Private Address Resolution Procedure is specified for the IUT in the IXIT. (Default: 0x00000000000000000000000000000000)</TEXT>
+      <TEXT>0000000000000000000000000000000000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_tester_device_IRK_for_resolvable_privacy_address_generation_procedure</TEXT>
+      <TEXT>The Device Identity (IRK and Identity Address) used in the Resolvable Private Address Generation Procedure and Resolvable Private Address Resolution Procedure is specified for the Lower Tester in the IXIT. (Default: 0x0123456789ABCDEF0123456789ABCDEF)</TEXT>
+      <TEXT>0000000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_iut_device_name_in_adv_packet_for_random_address</TEXT>
+      <TEXT>IUT advertising this local name for the PTS to make connection to. Default is not using it with empty string. (Default: "")</TEXT>
+      <TEXT>z</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_Tgap_104</TEXT>
+      <TEXT>The time in milliseconds, Maximum time span that a device is in limited discoverable mode. Default: 60 seconds. (Default: 60000)</TEXT>
+      <TEXT>60000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_URI</TEXT>
+      <TEXT>If no URI scheme is in use, or if the URI scheme in use is not defined as either a provisional or permanent scheme, TSPX_URI_scheme shall contain Unicode code point U+0001, represented in UTF-8 as 1 (hexadecimal 0x01) in the first octet. See Core Spec Supplement (CSS) v6, Section 1.1.18 (Default: 000168747470733A2F2F7777772E626C7565746F6F74682E636F6D - https://www.bluetooth.com)</TEXT>
+      <TEXT>000168747470733A2F2F7777772E626C7565746F6F74682E636F6D</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_periodic_advertising_data</TEXT>
+      <TEXT>The periodic advertising data in Periodic Advertising Mode from the Lower Tester (Default: 0x0201040503001801180D095054532d4741502d3036423803190000)</TEXT>
+      <TEXT>0201040503001801180D095054532D4741502D3036423803190000</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_Min_Encryption_Key_Size</TEXT>
+      <TEXT>Minimum encryption key size, range: 07'O to 10'O. (Default: 07)</TEXT>
+      <TEXT>07</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_broadcast_code</TEXT>
+      <TEXT>BIS Broadcast code (16 bytes)</TEXT>
+      <TEXT>8ED03323D1205E2D58191BF6285C3182</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_gap_iut_role</TEXT>
+      <TEXT>Indicates the IUT's role: Central or Peripheral. (Default: "Peripheral")</TEXT>
+      <TEXT>Peripheral</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_Use_IXIT_TSPX_spsm</TEXT>
+      <TEXT>Determine whether to use TSPX_spsm or MMI prompt for SPSM. (Default: FALSE)</TEXT>
+      <TEXT>FALSE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_Use_GATT</TEXT>
+      <TEXT>IUT support GATT. (Default: TRUE)</TEXT>
+      <TEXT>TRUE</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_ead_keys_sharing_method</TEXT>
+      <TEXT>EAD test case key sharing method options. This is only used for EAD test cases. If KEYS_SHARED_VIA_IXIT is chosen, TSPX_encrypted_data_key and TSPX_initialization_vector will be used.</TEXT>
+      <TEXT>KEYS_EXCHANGED_VIA_CONNECTION</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_encrypted_data_key</TEXT>
+      <TEXT>Encrypted Data Key as BIG Endian. This IXIT is only used for SCN test case (16 bytes)</TEXT>
+      <TEXT>57A9DA12D12E6E131E20612AD10A6A19</TEXT>
+    </ROW>
+    <ROW>
+      <TEXT>TSPX_initialization_vector</TEXT>
+      <TEXT>Encrypted Data IV as BIG Endian. This IXIT is only used for SCN test case  (8 bytes)</TEXT>
+      <TEXT>46E77AB1EF007A9E</TEXT>
+    </ROW>
+  </TABLE>
+  <ICS_IXIT_SIGNATURE_BLOCK>
+    <NAME>Signature for ICS/IXIT Tables</NAME>
+    <TEXT>Signature ___________________________________________</TEXT>
+    <TEXT>Date ________________________________________________</TEXT>
+  </ICS_IXIT_SIGNATURE_BLOCK>
+  <SECTION_HEADER>Test case results</SECTION_HEADER>
+  <RESULTS>
+    <TABLE>
+      <HEADER>
+        <TEXT>Test Case ID</TEXT>
+        <TEXT>Date of Test</TEXT>
+        <TEXT>Verdict</TEXT>
+        <TEXT>Version</TEXT>
+      </HEADER>
+      <ROW>
+        <TEST_CASE_ID>GAP/ADV/BV-03-C</TEST_CASE_ID>
+        <RESULTS_TEXT>Friday, February 13, 2026, 00:12:35</RESULTS_TEXT>
+        <OTHER_VERDICT>INDCSV</OTHER_VERDICT>
+        <TEST_CASE_VERSION>11.11.1.6</TEST_CASE_VERSION>
+      </ROW>
+    </TABLE>
+    <TABLE>
+      <ROW>
+        <BORDERED_TEXT>Summary</BORDERED_TEXT>
+        <SUMMARY_BLOCK>
+          <SUMMARY_ITEM>Test case : GAP/ADV/BV-03-C started</SUMMARY_ITEM>
+          <SUMMARY_ITEM>Final Verdict:INDCSV</SUMMARY_ITEM>
+          <SUMMARY_ITEM>GAP/ADV/BV-03-C finished</SUMMARY_ITEM>
+          <SUMMARY_ITEM>
+          </SUMMARY_ITEM>
+        </SUMMARY_BLOCK>
+      </ROW>
+      <ROW>
+        <BORDERED_TEXT>Encrypted Verdict</BORDERED_TEXT>
+        <ENCRYPTED_VERDICT>SPVbttOAXw0SDJ8ZIW36dr6/6pBqHsnaZoQnhCQB6+6LVkVimBJDGbASMiupftBa0q6k1PtaEL0jjx5XRetwXcNQ5VBo</ENCRYPTED_VERDICT>
+      </ROW>
+    </TABLE>
+    <TABLE>
+      <HEADER>
+        <TEXT>Test Case ID</TEXT>
+        <TEXT>Date of Test</TEXT>
+        <TEXT>Verdict</TEXT>
+        <TEXT>Version</TEXT>
+      </HEADER>
+      <ROW>
+        <TEST_CASE_ID>GAP/BROB/OBSV/BV-01-C</TEST_CASE_ID>
+        <RESULTS_TEXT>Thursday, February 12, 2026, 23:09:42</RESULTS_TEXT>
+        <PASS_VERDICT>PASS</PASS_VERDICT>
+        <TEST_CASE_VERSION>11.11.1.6</TEST_CASE_VERSION>
+      </ROW>
+    </TABLE>
+    <TABLE>
+      <ROW>
+        <BORDERED_TEXT>Summary</BORDERED_TEXT>
+        <SUMMARY_BLOCK>
+          <SUMMARY_ITEM>Test case : GAP/BROB/OBSV/BV-01-C started</SUMMARY_ITEM>
+          <SUMMARY_ITEM>Final Verdict:PASS</SUMMARY_ITEM>
+          <SUMMARY_ITEM>GAP/BROB/OBSV/BV-01-C finished</SUMMARY_ITEM>
+          <SUMMARY_ITEM>
+          </SUMMARY_ITEM>
+        </SUMMARY_BLOCK>
+      </ROW>
+      <ROW>
+        <BORDERED_TEXT>Encrypted Verdict</BORDERED_TEXT>
+        <ENCRYPTED_VERDICT>Wu9HoMGdElR4SbsONn79buz3+Y14ANnaYJoxmDQJ6eaBXEoq7S9Ud6F5JlakatIlo9Cxh/BCec5B9CEaJIQSP5FQ+khZapFr+prn</ENCRYPTED_VERDICT>
+      </ROW>
+    </TABLE>
+    <TABLE>
+      <HEADER>
+        <TEXT>Test Case ID</TEXT>
+        <TEXT>Date of Test</TEXT>
+        <TEXT>Verdict</TEXT>
+        <TEXT>Version</TEXT>
+      </HEADER>
+      <ROW>
+        <TEST_CASE_ID>GAP/BOND/BON/BV-01-C</TEST_CASE_ID>
+        <RESULTS_TEXT>Thursday, February 12, 2026, 21:58:46</RESULTS_TEXT>
+        <FAIL_VERDICT>FAIL</FAIL_VERDICT>
+        <TEST_CASE_VERSION>11.11.1.6</TEST_CASE_VERSION>
+      </ROW>
+    </TABLE>
+    <TABLE>
+      <ROW>
+        <BORDERED_TEXT>Summary</BORDERED_TEXT>
+        <SUMMARY_BLOCK>
+          <SUMMARY_ITEM>Test case : GAP/BOND/BON/BV-01-C started</SUMMARY_ITEM>
+          <SUMMARY_ITEM>Final Verdict:FAIL</SUMMARY_ITEM>
+          <SUMMARY_ITEM>GAP/BOND/BON/BV-01-C finished</SUMMARY_ITEM>
+          <SUMMARY_ITEM>
+          </SUMMARY_ITEM>
+        </SUMMARY_BLOCK>
+      </ROW>
+      <ROW>
+        <BORDERED_TEXT>Encrypted Verdict</BORDERED_TEXT>
+        <ENCRYPTED_VERDICT>Wu9HoMGdElR4SbsONn79buz3+Y14ANnaYJoxmDQJ6+aEXUoq6S9Ud6F5JkulbNIors3I6uQ5ZM9dmh4gNYwNENxQ5VdZdY504qw=</ENCRYPTED_VERDICT>
+      </ROW>
+    </TABLE>
+  </RESULTS>
+</REPORT>
