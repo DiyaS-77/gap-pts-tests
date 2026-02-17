@@ -1,41 +1,35 @@
-2026-02-17 13:35:48,529 | INFO | [INFO] Detecting Bluetooth interfaces...
-2026-02-17 13:35:48,669 | INFO | Command: hciconfig -a | grep -B 2 "BD A"
+2026-02-17 14:17:10,679 | INFO | utils | start_dbus_daemon | Cleaning up existing D-Bus daemons...
+2026-02-17 14:17:10,680 | INFO | utils | stop_daemons | Stopping all running daemons...
+2026-02-17 14:17:10,687 | INFO | utils | run | Command: killall -9 /usr/local/bluez/dbus-1.12.20/bin/dbus-daemon
+Output: 
+2026-02-17 14:17:10,687 | INFO | utils | stop_daemons | Successfully stopped dbus and bluetooth daemon processes.
+2026-02-17 14:17:10,687 | INFO | utils | start_dbus_daemon | Starting D-Bus daemon...
+2026-02-17 14:17:10,693 | INFO | utils | run | Command: /usr/local/bluez/dbus-1.12.20/bin/dbus-daemon --system --nopidfile
+Output: 
+2026-02-17 14:17:10,693 | INFO | utils | start_dbus_daemon | D-Bus daemon started successfully.
+2026-02-17 14:17:10,694 | INFO | utils | start_bluetooth_daemon | Cleaning up existing bluetooth daemons...
+2026-02-17 14:17:10,694 | INFO | utils | stop_bluetoothd_daemon | Stopping running bluetoothd daemons...
+2026-02-17 14:17:10,700 | INFO | utils | run | Command: killall -9 bluetoothd
+Output: bluetoothd: no process found
+2026-02-17 14:17:10,700 | INFO | utils | stop_bluetoothd_daemon | Successfully stopped bluetoothd daemon processes.
+2026-02-17 14:17:10,700 | INFO | utils | start_bluetooth_daemon | Starting bluetooth daemon...
+2026-02-17 14:17:10,722 | INFO | utils | start_bluetooth_daemon | Bluetoothd logs started /root/Desktop/logs/2026_02_17_14_17_10_logs/bluetoothd.log
+2026-02-17 14:17:10,723 | INFO | utils | start_pulseaudio_daemon | Cleaning up existing pulseaudio daemons...
+2026-02-17 14:17:10,723 | INFO | utils | stop_pulseaudio_daemon | Stopping pulseaudio daemon...
+2026-02-17 14:17:10,744 | INFO | utils | run | Command: pkill -9 -f pulseaudio
+Output: 
+2026-02-17 14:17:10,744 | INFO | utils | stop_pulseaudio_daemon | Pulseaudio daemon stopped.
+2026-02-17 14:17:10,744 | INFO | utils | start_pulseaudio_daemon | Starting pulseaudio daemon...
+2026-02-17 14:17:10,747 | INFO | utils | start_pulseaudio_daemon | pulseaudio logs started /root/Desktop/logs/2026_02_17_14_17_10_logs/pulseaudio.log
+2026-02-17 14:17:10,748 | INFO | stub_bluetooth | _init_bt_components | [INFO] Detecting Bluetooth interfaces...
+2026-02-17 14:17:10,869 | INFO | utils | run | Command: hciconfig -a | grep -B 2 "BD A"
 Output: hci0:	Type: Primary  Bus: USB
 	BD Address: 5C:F3:70:60:1D:A1  ACL MTU: 1021:8  SCO MTU: 64:1
-2026-02-17 13:35:48,670 | INFO | Controllers {'5C:F3:70:60:1D:A1 ': 'hci0'} found on host
-2026-02-17 13:35:48,670 | INFO | [INFO] Using interface: hci0
-2026-02-17 13:35:48,670 | INFO | [INFO] Initializing BluetoothDeviceManager...
-Traceback (most recent call last):
-  File "/usr/lib/python3/dist-packages/dbus/bus.py", line 177, in activate_name_owner
-    return self.get_name_owner(bus_name)
-  File "/usr/lib/python3/dist-packages/dbus/bus.py", line 361, in get_name_owner
-    return self.call_blocking(BUS_DAEMON_NAME, BUS_DAEMON_PATH,
-  File "/usr/lib/python3/dist-packages/dbus/connection.py", line 652, in call_blocking
-    reply_message = self.send_message_with_reply_and_block(
-dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NameHasNoOwner: Could not get owner of name 'org.bluez': no such name
+2026-02-17 14:17:10,870 | INFO | utils | get_controllers_connected | Controllers {'5C:F3:70:60:1D:A1 ': 'hci0'} found on host
+2026-02-17 14:17:10,870 | INFO | stub_bluetooth | _init_bt_components | [INFO] Using interface: hci0
+2026-02-17 14:17:10,870 | INFO | stub_bluetooth | _init_bt_components | [INFO] Initializing BluetoothDeviceManager...
+2026-02-17 14:17:11,361 | INFO | bluez | register_agent | Registered Agent successfully at /test/agent with capability: DisplayYesNo
+2026-02-17 14:17:11,361 | INFO | stub_bluetooth | _init_bt_components | [AGENT] Registered agent with NoInputNoOutput capability.
+2026-02-17 14:17:11,361 | INFO | stub_bluetooth | __init__ | [SERVER INIT] RemoteControlServicer initialized.
+2026-02-17 14:17:11,361 | INFO | [INFO] gRPC server running on port 50051...
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "server.py", line 34, in <module>
-    serve()
-  File "server.py", line 23, in serve
-    remote_pb2_grpc.add_RemoteControlServicer_to_server(RemoteControlServicer(), server)
-  File "/root/pts-grpc/stub_bluetooth.py", line 116, in __init__
-    self._init_bt_components()
-  File "/root/pts-grpc/stub_bluetooth.py", line 166, in _init_bt_components
-    self.bt_manager = BluetoothDeviceManager(log=logger, interface=interface)
-  File "/root/pts-grpc/libraries/bluetooth/bluez.py", line 31, in __init__
-    self.adapter_proxy = self.bus.get_object(constants.bluez_service, self.adapter_path)
-  File "/usr/lib/python3/dist-packages/dbus/bus.py", line 241, in get_object
-    return self.ProxyObjectClass(self, bus_name, object_path,
-  File "/usr/lib/python3/dist-packages/dbus/proxies.py", line 250, in __init__
-    self._named_service = conn.activate_name_owner(bus_name)
-  File "/usr/lib/python3/dist-packages/dbus/bus.py", line 182, in activate_name_owner
-    self.start_service_by_name(bus_name)
-  File "/usr/lib/python3/dist-packages/dbus/bus.py", line 277, in start_service_by_name
-    return (True, self.call_blocking(BUS_DAEMON_NAME, BUS_DAEMON_PATH,
-  File "/usr/lib/python3/dist-packages/dbus/connection.py", line 652, in call_blocking
-    reply_message = self.send_message_with_reply_and_block(
-dbus.exceptions.DBusException: org.freedesktop.DBus.Error.TimedOut: Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
-root@diya:~/pts-grpc# 
